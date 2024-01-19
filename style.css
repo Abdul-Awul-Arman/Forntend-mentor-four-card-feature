@@ -1,0 +1,58 @@
+:root{
+ /* Primary */
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* Neutral */
+
+--VeryDarkBlue: hsl(234, 12%, 34%);
+--GrayishBlue: hsl(229, 6%, 66%);
+--VeryLightGray: hsl(0, 0%, 98%);
+
+--font:'Poppins', sans-serif;
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+    font-family: var(--font);
+    background-color: var(--VeryLightGray);
+    font-size: .9rem;
+}
+
+p{
+    line-height: 1.5;
+}
+
+/* header styling */
+header{
+    display: block;
+    width:19.8rem ;
+    margin-inline:auto;
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--VeryDarkBlue);
+}
+
+header h1{
+    font-size: 1.45rem;
+    font-weight:lighter;
+}
+
+header h1 span{
+    font-weight: bold;
+}
+
+header p{
+    margin-top:1rem;
+    color: var(--GrayishBlue);
+}
