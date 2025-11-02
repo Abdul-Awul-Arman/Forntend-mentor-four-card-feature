@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+
 
 export default function HomePage() {
   useEffect(() => {
@@ -40,25 +42,29 @@ export default function HomePage() {
     };
   }, []);
 
+  const pathname = usePathname();
+
+
   return (
-    <div className="bg-black text-white font-sans scroll-smooth transition">
+    <div className="bg-black text-white font-sans scroll-smooth transition ">
       {/* Navbar */}
-      <header className="flex justify-between items-center px-4 py-3 border-b border-gray-800 ">
-        <h1 className="text-5xl md:text-3xl font-bold tracking-wide">
+      <header className="flex justify-around md:justify-between md:px-40 gap-2.5 items-center  py-3 border-b border-gray-800 ">
+        <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
           Rizq<span className="text-gray-400">Tray</span>
         </h1>
-        <nav className="hidden md:flex space-x-6 font-bold text-base">
-          <a href="#plans" className="text-gray-400 hover:text-white transition">Plans</a>
-          
-          <Link href="/Contact">Contact</Link>
-          <a href="#" className="text-gray-400 hover:text-white transition">LogIn</a>
-        </nav>
-        <button
-          className="md:hidden text-gray-400 hover:text-white text-sm"
-          onClick={() => document.querySelector("nav")?.classList.toggle("hidden")}
-        >
-          Menu
-        </button>
+        <nav className=" md:flex space-x-6 font-bold text-base">
+ 
+
+  <Link
+    href="/Contact"
+    className={`transition ${pathname === "/contact" ? "text-white" : "text-gray-400 hover:text-white"}`}
+  >
+    Contact
+  </Link>
+
+  
+</nav>
+
       </header>
 
       {/* Hero Section */}

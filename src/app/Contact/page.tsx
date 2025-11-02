@@ -1,6 +1,6 @@
 import ContactPage from "@/components/ContactsPage";
 
-export default function Contacts(){
+export default function Contact(){
     return(
         <ContactPage></ContactPage>
     )
