@@ -56,7 +56,7 @@ export default function HomePage() {
  
 
   <Link
-    href="/Contact"
+    href="/contact"
     className={`transition ${pathname === "/contact" ? "text-white" : "text-gray-400 hover:text-white"}`}
   >
     Contact
