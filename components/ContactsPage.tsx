@@ -71,57 +71,7 @@ export default function ContactPage() {
         </p>
       </div>
 
-      {/* Netlify Contact Form */}
-      <div className="mt-8 bg-gray-900 p-6 rounded-xl shadow-xl w-full max-w-md scroll-animate">
-        <h2 className="text-lg md:text-xl font-semibold mb-4 text-white">Send us a Message</h2>
-
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          className="space-y-4"
-        >
-          {/* Hidden fields for Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>
-              Don’t fill this out if you’re human: <input name="bot-field" />
-            </label>
-          </p>
-
-          {/* Inputs */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-green-500"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-green-500"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows={4}
-            className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-green-500"
-            required
-          ></textarea>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-white hover:bg-gray-200 text-black font-bold py-3 rounded-lg transition duration-300 transform hover:scale-105"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+     
     </div>
   );
 }
