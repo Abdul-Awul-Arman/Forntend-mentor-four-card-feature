@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function HomePage() {
   useEffect(() => {
@@ -48,7 +49,8 @@ export default function HomePage() {
         </h1>
         <nav className="hidden md:flex space-x-6 font-bold text-base">
           <a href="#plans" className="text-gray-400 hover:text-white transition">Plans</a>
-          <a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a>
+          
+          <Link href="/Contact">Contact</Link>
           <a href="#" className="text-gray-400 hover:text-white transition">LogIn</a>
         </nav>
         <button
